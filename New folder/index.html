@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghazi Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FAFAFA;
+            --color-secondary: #E5A93C;
+            --color-accent: #D4AF37;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: var(--color-bg);
+            color: #1a1a1a;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Gambetta', serif;
+        }
+
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-accent);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform-origin: right;
+        }
+
+        .gold-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen bg-[#FAFAFA] text-[#1a1a1a] flex flex-col">
+        <!-- Navigation -->
+        <nav id="navbar"
+            class="fixed top-0 w-full bg-white z-50 border-b border-[#E5A93C]/10 py-6 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+                <a href="#" id="nav-logo"
+                    class="text-2xl font-bold tracking-tighter text-[#D4AF37] flex items-center gap-2 group">
+                    <iconify-icon icon="lucide:gem" class="transition-transform group-hover:scale-110"></iconify-icon>
+                    <span class="font-['Gambetta'] italic">JG</span>
+                </a>
+                <div class="hidden md:flex items-center gap-12">
+                    <a href="#projects" id="nav-projects-link"
+                        class="text-sm font-medium tracking-widest uppercase text-[#E5A93C] hover:text-[#D4AF37] transition-colors gold-underline">Works</a>
+                    <a href="#about" id="nav-about-link"
+                        class="text-sm font-medium tracking-widest uppercase text-[#E5A93C] hover:text-[#D4AF37] transition-colors gold-underline">About</a>
+                    <a href="#services" id="nav-services-link"
+                        class="text-sm font-medium tracking-widest uppercase text-[#E5A93C] hover:text-[#D4AF37] transition-colors gold-underline">Services</a>
+                    <a href="#contact" id="nav-contact-link"
+                        class="px-6 py-2 border border-[#D4AF37] text-[#D4AF37] text-xs tracking-widest uppercase hover:bg-[#D4AF37] hover:text-white transition-all duration-300">Let's
+                        Talk</a>
+                </div>
+                <button class="md:hidden text-[#E5A93C] text-2xl">
+                    <iconify-icon icon="lucide:menu"></iconify-icon>
+                </button>
+            </div>
+        </nav>
+
+        <main class="flex-1 pt-20">
+            <!-- Hero Section -->
+            <section class="relative h-[85vh] flex items-center overflow-hidden px-8 md:px-16">
+                <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in space-y-8">
+                        <p class="text-[#E5A93C] tracking-[0.3em] uppercase text-xs font-bold">Digital Experience
+                            Architect</p>
+                        <h1 class="text-6xl md:text-8xl lg:text-9xl leading-[1] text-[#1a1a1a] tracking-tighter">
+                            MUHAMMAD
+                            <br />
+                            <span class="italic text-[#D4AF37]">FATHAN.</span>
+                        </h1>
+                        <p class="text-lg text-[#1a1a1a]/70 max-w-md font-light leading-relaxed">
+                            Pelajar yang aktif di bidang digital dan baru memasuki dunia coding.
+                        </p>
+                        <div class="pt-4 flex items-center gap-8">
+                            <a href="#projects" id="hero-cta-main"
+                                class="bg-[#D4AF37] text-white px-10 py-5 rounded-none text-xs tracking-widest uppercase font-bold hover:bg-[#C5A028] transition-all duration-300 shadow-xl shadow-[#D4AF37]/20">
+                                View Portfolio
+                            </a>
+                            <a href="#contact" id="hero-cta-secondary"
+                                class="text-xs tracking-widest uppercase font-bold text-[#E5A93C] flex items-center gap-2 group border-b border-transparent hover:border-[#E5A93C] transition-all">
+                                Contact Me <iconify-icon icon="lucide:arrow-right"
+                                    class="transition-transform group-hover:translate-x-1"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative h-full">
+                        <div
+                            class="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[600px] bg-[#E5A93C]/5 border border-[#E5A93C]/10 rounded-tl-[100px] rounded-br-[100px] -rotate-3">
+                        </div>
+                        <div
+                            class="relative z-10 w-full h-[600px] bg-[#FAFAFA] border border-[#E5A93C]/20 overflow-hidden rounded-tl-[100px] rounded-br-[100px] transition-transform duration-700 hover:scale-[1.02]">
+                            <img src="photo-removebg-preview.png" alt="Muhammad Fathan Portrait"
+                                class="w-full h-full object-contain object-bottom scale-105 origin-bottom transition-transform duration-500">
+                        </div>
+                        <div
+                            class="absolute bottom-10 -left-10 z-20 bg-white p-8 border border-[#E5A93C]/10 shadow-2xl">
+                            <div class="text-[#D4AF37] font-['Gambetta'] text-4xl mb-1">SMPIT</div>
+                            <div class="text-[10px] tracking-widest uppercase font-bold text-[#E5A93C]/60">
+                                ALBUNYAN</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="projects" class="py-32 px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                        <div class="space-y-4">
+                            <h2 class="text-4xl md:text-5xl text-[#1a1a1a]">Selected Works</h2>
+                            <div class="w-24 h-[2px] bg-[#D4AF37]"></div>
+                        </div>
+                        <p class="text-[#E5A93C] max-w-sm text-sm uppercase tracking-widest leading-loose">
+                            Saya berusia 13 dan memiliki ketertarikan mengenai coding </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                        <!-- Project Card 1 -->
+                        <a href="#" id="project-1" class="group block space-y-6">
+                            <div class="relative aspect-[4/5] overflow-hidden bg-white border border-[#E5A93C]/10">
+                                <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=2667&auto=format&fit=crop"
+                                    alt="Interior Design App"
+                                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale">
+                                <div
+                                    class="absolute inset-0 bg-[#E5A93C]/0 group-hover:bg-[#D4AF37]/10 transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span class="text-xs tracking-widest uppercase font-bold">View Case Study</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl mb-1">Aura Interior</h3>
+                                    <p class="text-[#E5A93C] text-xs tracking-widest uppercase">UI/UX • Art Direction
+                                    </p>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right"
+                                    class="text-2xl text-[#D4AF37] transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+                            </div>
+                        </a>
+
+                        <!-- Project Card 2 -->
+                        <a href="#" id="project-2" class="group block space-y-6">
+                            <div class="relative aspect-[4/5] overflow-hidden bg-white border border-[#E5A93C]/10">
+                                <img src="National.png" alt="Minimalist Watch"
+                                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale">
+                                <div
+                                    class="absolute inset-0 bg-[#E5A93C]/0 group-hover:bg-[#D4AF37]/10 transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span class="text-xs tracking-widest uppercase font-bold">View Case Study</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl mb-1">Chronos Luxe</h3>
+                                    <p class="text-[#E5A93C] text-xs tracking-widest uppercase">Ecommerce • Motion</p>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right"
+                                    class="text-2xl text-[#D4AF37] transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+                            </div>
+                        </a>
+
+                        <!-- Project Card 3 -->
+                        <a href="#" id="project-3" class="group block space-y-6 lg:mt-24">
+                            <div class="relative aspect-[4/5] overflow-hidden bg-white border border-[#E5A93C]/10">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+                                    alt="Branding Project"
+                                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale">
+                                <div
+                                    class="absolute inset-0 bg-[#E5A93C]/0 group-hover:bg-[#D4AF37]/10 transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span class="text-xs tracking-widest uppercase font-bold">View Case Study</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl mb-1">Abstract Studio</h3>
+                                    <p class="text-[#E5A93C] text-xs tracking-widest uppercase">Visual Identity • Web
+                                    </p>
+                                </div>
+                                <iconify-icon icon="lucide:arrow-up-right"
+                                    class="text-2xl text-[#D4AF37] transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About / Achievements -->
+            <section id="about" class="py-32 bg-[#1a1a1a] text-[#FAFAFA]">
+                <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div class="space-y-12">
+                        <h2 class="text-5xl md:text-7xl leading-tight">
+                            Pencapaian <span class="text-[#D4AF37] italic font-light"></span>
+                        </h2>
+                        <div class="grid grid-cols-2 gap-12">
+                            <div class="space-y-2">
+                                <h4 class="text-[#D4AF37] text-3xl font-bold">3 JUZ</h4>
+                                <p class="text-[#FAFAFA]/50 text-xs tracking-[0.2em] uppercase">Total hafalan</p>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-[#D4AF37] text-3xl font-bold">10+
+                                </h4>
+                                <p class="text-[#FAFAFA]/50 text-xs tracking-[0.2em] uppercase">Prestasi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <p class="text-xl leading-relaxed text-[#FAFAFA]/80">
+                            Bermimpi Besar, Berani Mencoba. . <span class="text-[#E5A93C] italic">60-30-10</span>
+
+                        </p>
+                        <div class="flex gap-4">
+                            <div
+                                class="px-4 py-2 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] tracking-widest uppercase">
+                                Minimalism</div>
+                            <div
+                                class="px-4 py-2 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] tracking-widest uppercase">
+                                Strategy</div>
+                            <div
+                                class="px-4 py-2 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] tracking-widest uppercase">
+                                Execution</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Contact -->
+            <section id="contact" class="py-40 px-8">
+                <div class="max-w-5xl mx-auto text-center space-y-10">
+                    <iconify-icon icon="lucide:sparkles" class="text-4xl text-[#D4AF37]"></iconify-icon>
+                    <h2 class="text-5xl md:text-7xl">Ready to start your <br /> next <span
+                            class="italic text-[#D4AF37]">legendary</span> project?</h2>
+                    <p class="text-lg text-[#E5A93C] tracking-wide max-w-2xl mx-auto">
+                        Available for select freelance opportunities and high-impact design consultations.
+                    </p>
+                    <div class="pt-8">
+                        <a href="mailto:hello@juliangold.com" id="footer-email-link"
+                            class="inline-block bg-[#D4AF37] text-white px-12 py-6 text-sm tracking-[0.3em] uppercase font-bold hover:bg-[#C5A028] transition-all duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-20 border-t border-[#E5A93C]/10 px-8 bg-white">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="text-center md:text-left space-y-4">
+                    <div class="text-xl font-['Gambetta'] font-bold text-[#D4AF37]">JG Portfolio</div>
+                    <p class="text-[10px] tracking-[0.2em] text-[#E5A93C] uppercase">&copy; 2024 Julian Gold. All rights
+                        reserved.</p>
+                </div>
+
+                <div class="flex gap-12">
+                    <a href="#" id="footer-link-dribbble"
+                        class="text-[#E5A93C] hover:text-[#D4AF37] transition-colors"><iconify-icon
+                            icon="lucide:dribbble" class="text-xl"></iconify-icon></a>
+                    <a href="#" id="footer-link-instagram"
+                        class="text-[#E5A93C] hover:text-[#D4AF37] transition-colors"><iconify-icon
+                            icon="lucide:instagram" class="text-xl"></iconify-icon></a>
+                    <a href="#" id="footer-link-linkedin"
+                        class="text-[#E5A93C] hover:text-[#D4AF37] transition-colors"><iconify-icon
+                            icon="lucide:linkedin" class="text-xl"></iconify-icon></a>
+                    <a href="#" id="footer-link-twitter"
+                        class="text-[#E5A93C] hover:text-[#D4AF37] transition-colors"><iconify-icon
+                            icon="lucide:twitter" class="text-xl"></iconify-icon></a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <a href="#" id="back-to-top"
+                        class="text-[10px] tracking-widest uppercase font-bold text-[#D4AF37] flex items-center gap-2 group">
+                        Back to Top <iconify-icon icon="lucide:arrow-up"
+                            class="transition-transform group-hover:-translate-y-1"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const nav = document.getElementById('navbar');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4', 'shadow-sm');
+            }
+        };
+    </script>
+</body>
+
+</html>
